@@ -1,0 +1,13 @@
+name: smart_pharmacist
+version: 0.1.0
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_tts: ^3.5.2
+  # Future dependencies for OCR and speech recognition can be added here
+
+flutter:
+  uses-material-design: true

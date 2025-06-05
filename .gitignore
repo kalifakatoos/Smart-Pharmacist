@@ -1,0 +1,25 @@
+# Flutter/Dart/Pub related
+**/doc/api/
+.dart_tool/
+.packages
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.melody
+
+# IntelliJ related
+*.iml
+.idea/
+
+# VS Code related
+.vscode/
+
+# Mac and Linux related
+*.DS_Store
+*.classpath
+*.project
+*.settings/
+
+# Others
+*.swp
