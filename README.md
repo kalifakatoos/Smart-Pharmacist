@@ -30,6 +30,23 @@
 - تحويل النص إلى صوت: **Google Text-to-Speech** أو **Azure Speech**.
 - البحث الصوتي: **Google Speech Recognition API**.
 
+## المتطلبات المسبقة
+
+لتشغيل التطبيق أو تعديله يجب تثبيت حزم **Flutter** و **Dart** على النظام. يمكن تثبيتهما على توزيعات لينكس عبر الأوامر التالية:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y apt-transport-https wget gpg
+wget -qO- https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | sudo tee /usr/share/keyrings/dart.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/dart.gpg] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main" | sudo tee /etc/apt/sources.list.d/dart_stable.list
+sudo apt-get update
+sudo apt-get install dart
+curl -L -o flutter.tar.xz https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.19.5-stable.tar.xz
+sudo tar xf flutter.tar.xz -C /opt
+export PATH="/opt/flutter/bin:$PATH"
+```
+
+بعد الانتهاء يُنصح بتشغيل `flutter doctor` للتحقق من سلامة الإعدادات.
 ## مخطط تدفق مبسط
 
 ```
