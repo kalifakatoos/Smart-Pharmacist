@@ -7,7 +7,10 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_tts: ^3.5.2
-  # Future dependencies for OCR and speech recognition can be added here
+  image_picker: ^1.0.7
+  google_mlkit_text_recognition: ^0.10.0
+
+  # Future dependencies for speech recognition can be added here
 
 flutter:
   uses-material-design: true

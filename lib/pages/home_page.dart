@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
+
 import 'drug_info_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,6 +13,23 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final TextEditingController _controller = TextEditingController();
+
+  Future<void> _scanImage() async {
+    final picker = ImagePicker();
+    final picked = await picker.pickImage(source: ImageSource.camera);
+    if (picked == null) return;
+
+    final inputImage = InputImage.fromFilePath(picked.path);
+    final textRecognizer = TextRecognizer(script: TextRecognitionScript.latin);
+    final RecognizedText recognized =
+        await textRecognizer.processImage(inputImage);
+    await textRecognizer.close();
+
+    final text = recognized.text.trim();
+    if (text.isNotEmpty) {
+      _searchDrug(text.split('\n').first);
+    }
+  }
 
   void _searchDrug(String name) {
     if (name.isEmpty) return;
@@ -44,9 +64,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton.icon(
-                  onPressed: () {
-                    // TODO: integrate camera and OCR search
-                  },
+                  onPressed: _scanImage,
                   icon: const Icon(Icons.camera_alt),
                   label: const Text('تصوير'),
                 ),
