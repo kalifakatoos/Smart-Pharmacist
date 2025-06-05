@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Paracetamol",
+    "brand": "Panadol",
+    "uses": "Analgesic and antipyretic",
+    "dosage": "500mg every 4-6 hours (max 4g/day)",
+    "warnings": "Liver toxicity in high doses",
+    "interactions": "Alcohol, other paracetamol-containing products",
+    "side_effects": "Rare: rash, liver damage in overdose"
+  },
+  {
+    "name": "Ibuprofen",
+    "brand": "Advil",
+    "uses": "Anti-inflammatory and pain relief",
+    "dosage": "200-400mg every 4-6 hours (max 1200mg/day)",
+    "warnings": "Stomach upset, avoid in ulcers",
+    "interactions": "Aspirin, blood thinners",
+    "side_effects": "Nausea, heartburn"
+  },
+  {
+    "name": "Amoxicillin",
+    "brand": "Amoxil",
+    "uses": "Antibiotic for bacterial infections",
+    "dosage": "500mg every 8 hours",
+    "warnings": "Allergy to penicillins",
+    "interactions": "Warfarin, oral contraceptives",
+    "side_effects": "Diarrhea, rash"
+  }
+]
